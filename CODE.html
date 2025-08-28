@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Deha!</title>
+<style>
+    body {
+        font-family: 'Arial', sans-serif;
+        text-align: center;
+        background: linear-gradient(120deg, #ff9a9e, #fad0c4);
+        color: #fff;
+        margin: 0;
+        padding: 0;
+    }
+    .hidden {
+        display: none;
+    }
+    h1 {
+        font-size: 3em;
+        margin-top: 20vh;
+    }
+    button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        font-size: 1.2em;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        background-color: #fff;
+        color: #ff6f91;
+        transition: 0.3s;
+    }
+    button:hover {
+        background-color: #ff6f91;
+        color: #fff;
+    }
+    .memory img {
+        max-width: 80%;
+        margin: 20px 0;
+        border-radius: 15px;
+    }
+    .memory p {
+        font-size: 1.2em;
+        margin: 10px 20px;
+    }
+</style>
+</head>
+<body>
+
+<h1 id="greeting">Click to see your surprise, Deha! 🎉</h1>
+<button id="showBirthdayBtn">Click Here 🎂</button>
+
+<div id="birthday" class="hidden">
+    <h1>🎉 Happy Birthday Deha! 🎉</h1>
+    <button id="showMemoryBtn">See our memories 📸</button>
+</div>
+
+<div id="memories" class="hidden memory">
+    <h1>Our Favourite Moments ❤️</h1>
+    <p>Here you can add your favorite memory description</p>
+    <img src="your-photo-link-here.jpg" alt="Memory photo">
+    <p>Another memory description...</p>
+    <img src="your-photo-link-here2.jpg" alt="Memory photo 2">
+</div>
+
+<script>
+    const showBirthdayBtn = document.getElementById('showBirthdayBtn');
+    const birthdayDiv = document.getElementById('birthday');
+    const memoriesDiv = document.getElementById('memories');
+    const showMemoryBtn = document.getElementById('showMemoryBtn');
+    const greeting = document.getElementById('greeting');
+
+    showBirthdayBtn.addEventListener('click', () => {
+        greeting.classList.add('hidden');
+        showBirthdayBtn.classList.add('hidden');
+        birthdayDiv.classList.remove('hidden');
+    });
+
+    showMemoryBtn.addEventListener('click', () => {
+        birthdayDiv.classList.add('hidden');
+        memoriesDiv.classList.remove('hidden');
+    });
+</script>
+
+</body>
+</html>
